@@ -1,3 +1,9 @@
 from django.db import models
+import datetime
 
-# Create your models here.
+
+class Blog(models.Model):
+    image = models.ImageField(upload_to='images/')
+    title = models.CharField(max_length=100)
+    date = models.DateTimeField()
+    text = models.TextField()
