@@ -7,3 +7,6 @@ class Blog(models.Model):
     title = models.CharField(max_length=100)
     date = models.DateTimeField()
     text = models.TextField()
+
+    def summary(self):
+        return "{}{}".format(self.text[:100], '...')
