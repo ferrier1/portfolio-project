@@ -8,5 +8,11 @@ class Blog(models.Model):
     date = models.DateTimeField()
     text = models.TextField()
 
+    def __str__(self):
+        return self.title
+
     def summary(self):
         return "{}{}".format(self.text[:100], '...')
+
+    def pub_date(self):
+        return self.date.strftime('%b %e %Y')

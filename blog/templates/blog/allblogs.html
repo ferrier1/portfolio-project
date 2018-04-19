@@ -42,7 +42,7 @@
 {% for blog in blogs.all %}
 
 <a href=""><h4>{{ blog.title }}</h4></a>
-{{ blog.date }}
+{{ blog.pub_date }}
 <br />
 <img class="img-fluid" src="{{ blog.image.url }}" height=200 width="200"/>
 <br />
